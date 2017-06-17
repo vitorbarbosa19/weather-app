@@ -1,0 +1,96 @@
+/********  general styles for the app  ********/
+
+body {
+	margin: 0;
+}
+
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Overpass', sans-serif;
+	background: linear-gradient(45deg, #00b9ff, #ff320f);
+	background-size: 500% 500%;
+	animation: GradientBgAnimation 20s ease infinite;
+}
+
+@keyframes GradientBgAnimation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/********  styles for the main page  ********/
+
+.title {
+	margin: 0;
+	color: #fff;
+	font-size: 64px;
+}
+
+.weatherForm {
+	display: flex;
+	flex-direction: row;
+}
+
+.cityInput {
+	border: none;
+	width: 300px;
+	height: 30px;
+	font-family: 'Overpass', sans-serif;
+	font-size: 21px;
+	color: #333030;
+	background: #eee;
+	border-radius: 3px;
+	padding: 10px 20px;
+	margin: 15px;
+	text-align: center;
+}
+
+.cityInput:focus {
+	outline: none;
+	box-shadow: 0 1px 3px #eee;
+}
+
+.weatherBtn {
+	cursor: pointer;
+	font-size: 32px;
+	font-family: 'Overpass', sans-serif;
+	border: none;
+	border-radius: 40px;
+	padding: 10px 50px;
+	color: #fff;
+	background: linear-gradient(45deg, #f8ca00, #f9a11b);
+	transition: all 0.6s ease;
+	
+}
+
+.weatherBtn:hover {
+	box-shadow: 0px 0px 15px #fff;
+}
+
+@media (max-width: 980px) {
+	.weatherForm {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.weatherBtn {
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 600px) {
+	.title {
+		font-size: 48px;
+	}
+	.weatherBtn {
+		font-size: 26px;
+		padding: 10px 30px;
+	}
+	.cityInput {
+		width: 250px;
+	}
+}
